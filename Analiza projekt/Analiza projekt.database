@@ -3,6 +3,17 @@
   <Name>Analiza projekt</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
   <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>B77886FF900E4C18A95F79A6BFA488A9</Name>
+      <Value>
+        <Results xmlns="B77886FF900E4C18A95F79A6BFA488A9">
+          <Result sourcePath="[Stock Item]" sourceType="Dimension" rule="11">dismiss</Result>
+          <Result sourcePath="[Date]" sourceType="Dimension" rule="11">dismiss</Result>
+        </Results>
+      </Value>
+    </Annotation>
+  </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <LastUpdate>0001-01-01T00:00:00Z</LastUpdate>
@@ -10,4 +21,7 @@
     <ImpersonationMode>Default</ImpersonationMode>
     <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
   </DataSourceImpersonationInfo>
+  <Dimensions />
+  <DataSources />
+  <DataSourceViews />
 </Database>

@@ -6,10 +6,71 @@
     <Name>Analiza projekt.database</Name>
     <FullPath>Analiza projekt.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>Sales.cube</Name>
+      <FullPath>Sales.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Sales.partitions</Name>
+          <FullPath>Sales.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Stock Item.dim</Name>
+      <FullPath>Stock Item.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Date.dim</Name>
+      <FullPath>Date.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Territory.dim</Name>
+      <FullPath>Territory.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Employee.dim</Name>
+      <FullPath>Employee.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Customer.dim</Name>
+      <FullPath>Customer.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>Wide World Importers DW.ds</Name>
+      <FullPath>Wide World Importers DW.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>Wide World Importers DW.dsv</Name>
+      <FullPath>Wide World Importers DW.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Wide World Importers DW</Id>
+            <Name>Wide World Importers DW</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=DESKTOP-Q45J83B\ANNASQL;Integrated Security=SSPI;Initial Catalog=WideWorldImportersDW</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Wide World Importers DW</Id>
+            <Name>Wide World Importers DW</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>
