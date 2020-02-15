@@ -17,6 +17,26 @@
         </ProjectItem>
       </Dependencies>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Purchases.cube</Name>
+      <FullPath>Purchases.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Purchases.partitions</Name>
+          <FullPath>Purchases.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Orders.cube</Name>
+      <FullPath>Orders.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Orders.partitions</Name>
+          <FullPath>Orders.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
   </Cubes>
   <Dimensions>
     <ProjectItem>
@@ -38,6 +58,14 @@
     <ProjectItem>
       <Name>Customer.dim</Name>
       <FullPath>Customer.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Supplier.dim</Name>
+      <FullPath>Supplier.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Order.dim</Name>
+      <FullPath>Order.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>
