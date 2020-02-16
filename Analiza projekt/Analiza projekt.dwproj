@@ -84,6 +84,16 @@
       <FullPath>WWI DW views.dsv</FullPath>
     </ProjectItem>
   </DataSourceViews>
+  <Roles>
+    <ProjectItem>
+      <Name>FullReader.role</Name>
+      <FullPath>FullReader.role</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Administrator.role</Name>
+      <FullPath>Administrator.role</FullPath>
+    </ProjectItem>
+  </Roles>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
