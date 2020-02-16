@@ -79,6 +79,10 @@
       <Name>Wide World Importers DW.dsv</Name>
       <FullPath>Wide World Importers DW.dsv</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>WWI DW views.dsv</Name>
+      <FullPath>WWI DW views.dsv</FullPath>
+    </ProjectItem>
   </DataSourceViews>
   <Configurations>
     <Configuration>
