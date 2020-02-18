@@ -8,32 +8,12 @@
   </Database>
   <Cubes>
     <ProjectItem>
-      <Name>Sales.cube</Name>
-      <FullPath>Sales.cube</FullPath>
+      <Name>Wide World Importers DW.cube</Name>
+      <FullPath>Wide World Importers DW.cube</FullPath>
       <Dependencies>
         <ProjectItem>
-          <Name>Sales.partitions</Name>
-          <FullPath>Sales.partitions</FullPath>
-        </ProjectItem>
-      </Dependencies>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Purchases.cube</Name>
-      <FullPath>Purchases.cube</FullPath>
-      <Dependencies>
-        <ProjectItem>
-          <Name>Purchases.partitions</Name>
-          <FullPath>Purchases.partitions</FullPath>
-        </ProjectItem>
-      </Dependencies>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Orders.cube</Name>
-      <FullPath>Orders.cube</FullPath>
-      <Dependencies>
-        <ProjectItem>
-          <Name>Orders.partitions</Name>
-          <FullPath>Orders.partitions</FullPath>
+          <Name>Wide World Importers DW.partitions</Name>
+          <FullPath>Wide World Importers DW.partitions</FullPath>
         </ProjectItem>
       </Dependencies>
     </ProjectItem>
@@ -48,10 +28,6 @@
       <FullPath>Date.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Territory.dim</Name>
-      <FullPath>Territory.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>Employee.dim</Name>
       <FullPath>Employee.dim</FullPath>
     </ProjectItem>
@@ -64,8 +40,8 @@
       <FullPath>Supplier.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Order.dim</Name>
-      <FullPath>Order.dim</FullPath>
+      <Name>City.dim</Name>
+      <FullPath>City.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>
