@@ -804,6 +804,152 @@
       </Attributes>
     </Dimension>
   </Dimensions>
+  <Perspectives>
+    <Perspective dwd:design-time-name="99a03e06-f830-4935-b97e-0665fbc5fe83">
+      <ID>Perspective</ID>
+      <Name>Sale by City</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Dimensions>
+        <Dimension dwd:design-time-name="5f591271-69e9-406f-b2af-8a8f3424c687">
+          <CubeDimensionID>City</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="dac746af-2957-4401-9f67-3b0c86ab8f04">
+              <AttributeID>City Key</AttributeID>
+            </Attribute>
+            <Attribute dwd:design-time-name="cea05ed5-c476-4e80-8a5c-b2b98865111d">
+              <AttributeID>State Province</AttributeID>
+            </Attribute>
+            <Attribute dwd:design-time-name="8904f733-99bf-43f8-b6a5-e4994ed15d93">
+              <AttributeID>Country</AttributeID>
+            </Attribute>
+            <Attribute dwd:design-time-name="62d6be16-843b-4d35-9293-b860036a6643">
+              <AttributeID>Continent</AttributeID>
+            </Attribute>
+            <Attribute dwd:design-time-name="e4615c5f-c52a-4643-8ad3-fd0d79fc169c">
+              <AttributeID>Sales Territory</AttributeID>
+            </Attribute>
+            <Attribute dwd:design-time-name="1def588c-8989-4697-9ed1-033dcfb45ea9">
+              <AttributeID>Region</AttributeID>
+            </Attribute>
+            <Attribute dwd:design-time-name="55896a8b-7b15-43ec-b930-b69d996a8f8d">
+              <AttributeID>Subregion</AttributeID>
+            </Attribute>
+          </Attributes>
+          <Hierarchies>
+            <Hierarchy dwd:design-time-name="f0b1dd2f-a2bf-4233-993f-4d9b663919bf">
+              <HierarchyID>Hierarchy</HierarchyID>
+            </Hierarchy>
+            <Hierarchy dwd:design-time-name="9f7c7b2a-5ee1-4ecf-9960-0206f3769b24">
+              <HierarchyID>Hierarchy 1</HierarchyID>
+            </Hierarchy>
+          </Hierarchies>
+        </Dimension>
+      </Dimensions>
+      <MeasureGroups>
+        <MeasureGroup dwd:design-time-name="f59e6d96-b167-4f86-9512-fbfc85fbeb99">
+          <MeasureGroupID>Fact Sale</MeasureGroupID>
+          <Measures>
+            <Measure dwd:design-time-name="6067bc0a-add9-4fe3-9084-27f9e39e2799">
+              <MeasureID>Sale Quantity</MeasureID>
+            </Measure>
+            <Measure dwd:design-time-name="be37630b-88dc-47c4-8b48-b27d0d9344f4">
+              <MeasureID>Sale Unit Price</MeasureID>
+            </Measure>
+            <Measure dwd:design-time-name="99984a1c-ad01-492a-9450-782faece5017">
+              <MeasureID>Sale Total Excluding Tax</MeasureID>
+            </Measure>
+            <Measure dwd:design-time-name="2eca01f1-3d98-4c27-a850-4ef1d7d4bd47">
+              <MeasureID>Sale Tax Amount</MeasureID>
+            </Measure>
+            <Measure dwd:design-time-name="bdaa0423-9344-45c0-87e5-365b7eb584ed">
+              <MeasureID>Sale Profit</MeasureID>
+            </Measure>
+            <Measure dwd:design-time-name="6d605af5-ea6d-485d-bd4e-9467b301d93b">
+              <MeasureID>Sale Total Including Tax</MeasureID>
+            </Measure>
+            <Measure dwd:design-time-name="6ddb6d9b-447e-4db3-ab01-df5c97b10de2">
+              <MeasureID>Sale Total Dry Items</MeasureID>
+            </Measure>
+            <Measure dwd:design-time-name="c1ca3c38-5944-407e-a646-6321ad9e4a48">
+              <MeasureID>Sale Total Chiller Items</MeasureID>
+            </Measure>
+            <Measure dwd:design-time-name="e543567d-5ba6-4da0-a7d3-e7237f523793">
+              <MeasureID>Sale Count</MeasureID>
+            </Measure>
+          </Measures>
+        </MeasureGroup>
+      </MeasureGroups>
+    </Perspective>
+    <Perspective dwd:design-time-name="f56a007d-3b5c-4be1-b254-fa47fbb230d2">
+      <ID>Perspective 1</ID>
+      <Name>Purchase by Customer-Date</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Dimensions>
+        <Dimension dwd:design-time-name="2889c5d3-3acc-4b2f-9ef5-8f28a0c10980">
+          <CubeDimensionID>Customer</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="be5f23d7-e835-4417-b27e-796b7a6a94ed">
+              <AttributeID>Customer Key</AttributeID>
+            </Attribute>
+            <Attribute dwd:design-time-name="b19f7e0d-c97e-425f-9f0b-141dc10d55b6">
+              <AttributeID>Category</AttributeID>
+            </Attribute>
+            <Attribute dwd:design-time-name="e218776a-f224-4395-893f-6e2f427b40f5">
+              <AttributeID>Buying Group</AttributeID>
+            </Attribute>
+          </Attributes>
+          <Hierarchies>
+            <Hierarchy dwd:design-time-name="0e52b2c9-d7ff-4ae2-be86-d0cbd798d4f3">
+              <HierarchyID>Hierarchy</HierarchyID>
+            </Hierarchy>
+          </Hierarchies>
+        </Dimension>
+        <Dimension dwd:design-time-name="11d3a149-c873-4b33-b070-ae0261ba1783">
+          <CubeDimensionID>Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="11d3267b-202a-4b17-b678-53c5ad3f9c08">
+              <AttributeID>Date</AttributeID>
+            </Attribute>
+            <Attribute dwd:design-time-name="0a1a6bbf-3815-4107-ad13-bfb82e50076b">
+              <AttributeID>Day</AttributeID>
+            </Attribute>
+            <Attribute dwd:design-time-name="a933740b-34f8-454a-889f-4e7eafff6d21">
+              <AttributeID>Calendar Year</AttributeID>
+            </Attribute>
+            <Attribute dwd:design-time-name="de4df1b2-5919-4b76-9a0b-4b254d8708e8">
+              <AttributeID>Calendar Month Number</AttributeID>
+            </Attribute>
+          </Attributes>
+          <Hierarchies>
+            <Hierarchy dwd:design-time-name="053cfe4d-78eb-418d-87f4-c2379967b62a">
+              <HierarchyID>Hierarchy</HierarchyID>
+            </Hierarchy>
+          </Hierarchies>
+        </Dimension>
+      </Dimensions>
+      <MeasureGroups>
+        <MeasureGroup dwd:design-time-name="6832043f-3d45-4aa1-822d-560e873a60d0">
+          <MeasureGroupID>Fact Purchase</MeasureGroupID>
+          <Measures>
+            <Measure dwd:design-time-name="1c84af33-6aa1-40f3-8802-8570b1a4debc">
+              <MeasureID>Purchase Ordered Outers</MeasureID>
+            </Measure>
+            <Measure dwd:design-time-name="e075b2dc-ed3d-4a77-b8cc-7955589ae7d4">
+              <MeasureID>Purchase Ordered Quantity</MeasureID>
+            </Measure>
+            <Measure dwd:design-time-name="dca3820e-1de9-4aae-881d-86584209ce6a">
+              <MeasureID>Purchase Received Outers</MeasureID>
+            </Measure>
+            <Measure dwd:design-time-name="399dcc3d-ab05-4e8d-80c8-b88b6038b137">
+              <MeasureID>Purchase Count</MeasureID>
+            </Measure>
+          </Measures>
+        </MeasureGroup>
+      </MeasureGroups>
+    </Perspective>
+  </Perspectives>
   <MeasureGroups>
     <MeasureGroup dwd:design-time-name="ab056220-f06a-485b-bf27-c733562cef00">
       <ID>Fact Movement</ID>
