@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="34" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="17510" scrolltop="11229" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="3768" y="9821" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="34" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="17510" scrolltop="11229" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="22246" y="7451" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
             </font>
@@ -710,18 +710,15 @@
         <Attribute dwd:design-time-name="e8f9fce8-0b7a-4a2f-b5b1-c6d1994b5a42">
           <AttributeID>Day</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="68f5ccb4-b455-4514-8c8d-b4bccfe8dd09">
-          <AttributeID>Month</AttributeID>
-        </Attribute>
-        <Attribute dwd:design-time-name="9bd6939a-4000-4986-add4-76e5f80ab704">
-          <AttributeID>Month Number</AttributeID>
-        </Attribute>
         <Attribute dwd:design-time-name="f3719730-6531-41ce-b2e4-0606fdf174e4">
           <AttributeID>Calendar Year</AttributeID>
         </Attribute>
+        <Attribute dwd:design-time-name="a9446288-798e-4f58-8990-f68057322a83">
+          <AttributeID>Calendar Month Number</AttributeID>
+        </Attribute>
       </Attributes>
       <Hierarchies>
-        <Hierarchy dwd:design-time-name="d7fd8c48-1eb6-42f4-b1cc-456589f5694b">
+        <Hierarchy dwd:design-time-name="eda9707d-bdf2-4abc-981d-2e554f044136">
           <HierarchyID>Hierarchy</HierarchyID>
         </Hierarchy>
       </Hierarchies>
@@ -919,15 +916,30 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="dc6aaf99-d195-4c34-a1f2-5bf0b705f1e4">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c77bdce3-7286-411c-be41-0ac712caae0a">
           <CubeDimensionID>Date</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="28e94c73-dc4b-4712-a8c8-ea1fd0c011cd">
+            <Attribute dwd:design-time-name="c15161a8-b063-40b5-a6fc-92c85bc468d8">
               <AttributeID>Date</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="7e74839f-5025-40b4-8fc2-70c67728ddbd">
-                  <DataType>Date</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6933ff3a-bc36-49c8-8831-3a894b71ac01">
+                <KeyColumn dwd:design-time-name="64782bb4-4d1b-4de8-adf2-f041293a1be2">
+                  <DataType>WChar</DataType>
+                  <DataSize>10</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e343a943-7290-46fe-ac30-f23760abe89e">
+                    <TableID>Fact_Movement</TableID>
+                    <ColumnID>Date_x0020_Key</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="c6382515-8741-472c-9c7d-c3f694068981">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="348da1d9-12f1-4f6f-959b-ce4f1cccea00">
+                    <TableID>Fact_Movement</TableID>
+                    <ColumnID>Date_x0020_Key</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="77170760-c42c-4854-a892-044647a0d1ce">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="654a6453-e88b-417c-b6c8-abe0ce7f3757">
                     <TableID>Fact_Movement</TableID>
                     <ColumnID>Date_x0020_Key</ColumnID>
                   </Source>
@@ -1270,24 +1282,6 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f275c789-3a67-4dd5-a3de-c9206c61fa40">
-          <CubeDimensionID>Date</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="c2b1c001-dfc5-4857-8811-d209548330e6">
-              <AttributeID>Date</AttributeID>
-              <KeyColumns>
-                <KeyColumn dwd:design-time-name="ade94f6a-4fdb-4a29-936b-adda4ee6507f">
-                  <DataType>Date</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d74dcfd9-dbd9-42e3-87f7-5d458a886ba0">
-                    <TableID>Fact_Purchase</TableID>
-                    <ColumnID>Date_x0020_Key</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-        </Dimension>
         <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c4c7b8f8-387c-40fd-b18e-c0de8f0eb4dd">
           <CubeDimensionID>Supplier</CubeDimensionID>
           <Attributes>
@@ -1299,6 +1293,39 @@
                   <Source xsi:type="ColumnBinding" dwd:design-time-name="7143cbcd-350c-4572-be43-c46715351399">
                     <TableID>Fact_Purchase</TableID>
                     <ColumnID>Supplier_x0020_Key</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0e0c4d91-f932-4958-b4f3-88827b20cc04">
+          <CubeDimensionID>Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="149f5ef1-ce69-4055-8a1d-e807a0982e44">
+              <AttributeID>Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="fbdd6c64-8ae6-41ee-b37f-fd3e02a89d1f">
+                  <DataType>WChar</DataType>
+                  <DataSize>10</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="924af68b-db78-4f65-a27e-a795f2981ae4">
+                    <TableID>Fact_Purchase</TableID>
+                    <ColumnID>Date_x0020_Key</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="1d15afae-3d06-402b-8f62-d78acac04e9d">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="31686742-a6d6-42f0-88d9-905d974c9dab">
+                    <TableID>Fact_Purchase</TableID>
+                    <ColumnID>Date_x0020_Key</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="e236d027-6b20-4d6f-8169-06d6325b662c">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9c1d3ffd-0195-4b94-9bdf-1d13f3878ed8">
+                    <TableID>Fact_Purchase</TableID>
+                    <ColumnID>Date_x0020_Key</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>

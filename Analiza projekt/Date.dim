@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="3188" scrolltop="-5543" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="2582" y="9821" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="3188" scrolltop="-5543" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="8382" y="7451" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
             </font>
@@ -68,12 +68,11 @@
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
       <Value>
-        <DiagramLayout ZoomPercent="100" ViewPortX="13" ViewPortY="0" xmlns="">
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
           <Shapes NodeWidth="148">
-            <Shape Id="Date" Expanded="false">
+            <Shape Id="Date" Expanded="true">
               <Attributes>
                 <Attribute Id="Date" />
-                <Attribute Id="Month Number" />
               </Attributes>
               <Position x="20" y="20" />
             </Shape>
@@ -83,9 +82,9 @@
               </Attributes>
               <Position x="210" y="20" />
             </Shape>
-            <Shape Id="Month" Expanded="false">
+            <Shape Id="Calendar Month Number" Expanded="false">
               <Attributes>
-                <Attribute Id="Month" />
+                <Attribute Id="Calendar Month Number" />
               </Attributes>
               <Position x="400" y="20" />
             </Shape>
@@ -123,18 +122,39 @@
     <Attribute dwd:design-time-name="4d367eea-9142-4707-8eaf-80aae9ff2545">
       <ID>Date</ID>
       <Name>Date</Name>
-      <Type>Days</Type>
+      <Type>Date</Type>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="51bbb141-8eeb-4683-b33a-5f7aa12a9cd6">
-          <DataType>Date</DataType>
-          <NullProcessing>UnknownMember</NullProcessing>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="661ac9f6-7268-4157-a224-6619b8d65d84">
+        <KeyColumn dwd:design-time-name="1aa20f5a-a7b1-4e22-bac7-9d167589879f">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="506229f4-e3b1-41a1-9126-ca8c02337a27">
             <TableID>Dimension_Date</TableID>
-            <ColumnID>Date</ColumnID>
+            <ColumnID>Day</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="6d14d826-b1b3-4b17-bdad-9771bfc20cb2">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e7ce5668-0b9f-4914-b166-1caa1651aef7">
+            <TableID>Dimension_Date</TableID>
+            <ColumnID>Calendar_x0020_Month_x0020_Number</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="7e9577f7-770b-4b4c-bb92-54f27716ffc1">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ad5c1769-e58c-473e-ae15-f1ee0dd930ea">
+            <TableID>Dimension_Date</TableID>
+            <ColumnID>Calendar_x0020_Year</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="1af55ca5-ca24-4c7d-b87b-a821e1c9cddc">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="cd8cc59b-3c4d-4a3c-83bc-218cc5030164">
+          <TableID>Dimension_Date</TableID>
+          <ColumnID>Date</ColumnID>
+        </Source>
+      </NameColumn>
       <Translations>
         <Translation dwd:design-time-name="8583ed81-272a-49f4-bdb9-8f35942ac342">
           <Language>1045</Language>
@@ -142,13 +162,9 @@
         </Translation>
       </Translations>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="3ce6214d-fdf0-442e-a460-6f0cd01e8ab8">
+        <AttributeRelationship dwd:design-time-name="8e380760-a806-414d-a7b2-78a6b10d9856">
           <AttributeID>Day</AttributeID>
           <Name>Day</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="1621aef0-c7b9-40a9-8121-75d42ba4eb33">
-          <AttributeID>Month Number</AttributeID>
-          <Name>Month Number</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
@@ -176,64 +192,12 @@
         </Translation>
       </Translations>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="3bc968a0-14b3-4064-ba99-66348443c579">
-          <AttributeID>Month</AttributeID>
-          <Name>Month</Name>
+        <AttributeRelationship dwd:design-time-name="ad88f6e9-69f3-4e70-9085-d4ef32adb1c6">
+          <AttributeID>Calendar Month Number</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Calendar Month Number</Name>
         </AttributeRelationship>
       </AttributeRelationships>
-      <OrderBy>Key</OrderBy>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="c75f354b-e25b-4eeb-805c-ee4232e9f0aa">
-      <ID>Month</ID>
-      <Name>Month</Name>
-      <Type>Months</Type>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="647112da-8d18-4b52-997b-59fdb4aa77d8">
-          <DataType>WChar</DataType>
-          <DataSize>10</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="b93b284e-00c8-46ef-bcfa-231abe62b3a4">
-            <TableID>Dimension_Date</TableID>
-            <ColumnID>Month</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <Translations>
-        <Translation dwd:design-time-name="0043bd34-d5b4-4992-b5e8-13edb280e8c2">
-          <Language>1045</Language>
-          <Caption>Miesiąc</Caption>
-        </Translation>
-      </Translations>
-      <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="5792c4f2-5b02-4fe7-a738-915aadb49cfc">
-          <AttributeID>Calendar Year</AttributeID>
-          <Name>Calendar Year</Name>
-        </AttributeRelationship>
-      </AttributeRelationships>
-      <OrderBy>Key</OrderBy>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="3e5bc040-a6a1-4dc0-b4f2-d8dd73348e02">
-      <ID>Month Number</ID>
-      <Name>Month Number</Name>
-      <Type>MonthOfYear</Type>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="01a5e2b0-7850-451c-bf54-d8de4f304ce8">
-          <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="338d505c-8ff8-4f0b-8a13-91c275cfe0cc">
-            <TableID>Dimension_Date</TableID>
-            <ColumnID>Calendar_x0020_Month_x0020_Number</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <Translations>
-        <Translation dwd:design-time-name="ea711278-f4fd-44a4-81bb-f3dfc52aab9f">
-          <Language>1045</Language>
-          <Caption>Numer miesiąca</Caption>
-        </Translation>
-      </Translations>
       <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
@@ -261,44 +225,49 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
+    <Attribute dwd:design-time-name="07ce3a75-dd32-474a-9132-2a798cd55b01">
+      <ID>Calendar Month Number</ID>
+      <Name>Calendar Month Number</Name>
+      <Type>MonthOfYear</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d8edbfa9-d080-4df8-aaf5-8be9039875e6">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="647934f1-13b6-47ad-9a63-8c4793605a51">
+            <TableID>Dimension_Date</TableID>
+            <ColumnID>Calendar_x0020_Month_x0020_Number</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="8f7a6772-94d3-4145-87fb-b25e4eeb4c2a">
+          <AttributeID>Calendar Year</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Calendar Year</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
   </Attributes>
   <Hierarchies>
-    <Hierarchy dwd:design-time-name="704ca7ea-7390-477c-9bb5-eda9966546a0">
+    <Hierarchy dwd:design-time-name="da9c7d74-fb45-4e37-b603-b69dab804076">
       <ID>Hierarchy</ID>
       <Name>Calendar</Name>
-      <Translations>
-        <Translation dwd:design-time-name="faae2abc-081e-4ac2-ad4d-068d4caa323a">
-          <Language>1045</Language>
-          <Caption>Kalendarz</Caption>
-        </Translation>
-      </Translations>
       <Levels>
-        <Level dwd:design-time-name="d9fba787-80a4-444a-92c0-5200a9188697">
+        <Level dwd:design-time-name="10566034-f476-434f-be61-8e39ca7d36ff">
           <ID>Calendar Year</ID>
           <Name>Calendar Year</Name>
           <SourceAttributeID>Calendar Year</SourceAttributeID>
-          <Translations>
-            <Translation dwd:design-time-name="37478eb6-1cf5-4797-9d0b-00a81b05d286">
-              <Language>1045</Language>
-              <Caption>Rok kalendarzowy</Caption>
-            </Translation>
-          </Translations>
         </Level>
-        <Level dwd:design-time-name="7a48a675-69af-4700-939d-25a54b943990">
-          <ID>Month</ID>
-          <Name>Month</Name>
-          <SourceAttributeID>Month</SourceAttributeID>
+        <Level dwd:design-time-name="46037d95-c4af-4baa-a006-d79517cf4cd3">
+          <ID>Calendar Month Number</ID>
+          <Name>Calendar Month Number</Name>
+          <SourceAttributeID>Calendar Month Number</SourceAttributeID>
         </Level>
-        <Level dwd:design-time-name="5c38a8ea-3793-47cc-8442-8db19333bee2">
+        <Level dwd:design-time-name="c2c73f39-f177-4f7b-86f3-701f95f16520">
           <ID>Day</ID>
           <Name>Day</Name>
           <SourceAttributeID>Day</SourceAttributeID>
-          <Translations>
-            <Translation dwd:design-time-name="72c0c73f-f824-437e-97da-198813e6c3bc">
-              <Language>1045</Language>
-              <Caption>Dzień</Caption>
-            </Translation>
-          </Translations>
         </Level>
       </Levels>
     </Hierarchy>
